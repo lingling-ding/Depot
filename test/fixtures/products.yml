@@ -3,11 +3,11 @@
 one:
   title: MyString
   description: MyText
-  image_url: MyString
+  image_url: dpchat.jpg
   price: 9.99
 
 two:
-  title: MyString
-  description: MyText
-  image_url: MyString
-  price: 9.99
+  title: MyString1
+  description: MyText1
+  image_url: dpchat.jpg
+  price: 10
