@@ -2,12 +2,12 @@
 
 one:
   title: MyString
-  description: MyText
+  description: this is a description!
   image_url: dpchat.jpg
   price: 9.99
 
 two:
   title: MyString1
-  description: MyText1
+  description: this is a description!
   image_url: dpchat.jpg
   price: 10

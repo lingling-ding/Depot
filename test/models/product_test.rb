@@ -13,7 +13,7 @@ class ProductTest < ActiveSupport::TestCase
 
   test "product price must be positive" do
     product = Product.new(title: "test",
-                          description: "aaa",
+                          description: "this is a description!",
                           image_url: "aaa.gif"
                         )
     product.price = -1
@@ -29,7 +29,7 @@ class ProductTest < ActiveSupport::TestCase
   def new_product(image_url)
     Product.new(
       title: "test1",
-      description: "bbb",
+      description: "this is a description!",
       price: 1,
       image_url: image_url
     )
@@ -49,11 +49,21 @@ class ProductTest < ActiveSupport::TestCase
   test "product is not valid without a unique title" do
     product = Product.new(
       title: products(:one).title,
-      description: "test",
+      description: "this is a description!",
       price: 1,
       image_url: "aaa.gif"
     )
     assert product.invalid?
     assert_equal [I18n.translate('errors.messages.taken')], product.errors[:title]
+  end
+
+  test "product description is at least ten characters" do
+    product = Product.new(
+      title: "aaaa",
+      description: "test",
+      price: 2,
+      image_url: "bbb.gif"
+    )
+    assert product.invalid?, " product description is at least ten characters "
   end
 end
