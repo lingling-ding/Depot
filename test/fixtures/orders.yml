@@ -3,7 +3,7 @@
 one:
   name: Tom
   address: Address
-  email: test@exmple.com
+  email: tom@exmple.com
   pay_type: Check
 
 two:
